@@ -11,7 +11,10 @@
 
            
             <a href="{{ detailURL }}"><h5 class="announcement-title">{{ item.Title }}</h5></a>
+			{% comment %}
+			// removing the summary text to clear up presentation of this page
             <p class="announcement-text">{{ item.SummaryText }}</p>
+			{% endcomment %}
         </div>
         {% capture breakNow %}{{ forloop.index | Modulo:6 }}{% endcapture %}
         {% if breakNow == 0 -%}
